@@ -1,0 +1,55 @@
+# import AnimalShelter class from animal_shelter
+from animal_shelter import AnimalShelter
+
+# define data
+data = {"age_upon_outcome": "2 year",
+        "animal_id": "A634647",
+        "animal_type": "Dog",
+        "breed": "Pitbull",
+        "color": "Black",
+        "date_of_birth": "2019-09-04",
+        "datetime": "2019-09-04 10:49:00",
+        "monthyear": "2019-09-04T10:49:00",
+        "name": "Sari",
+        "outcome_subtype": "SCRP",
+        "outcome_type": "Transfer",
+        "sex_upon_outcome": "Female",
+        "location_lat": 30.6525984560228,
+        "location_long": -97.7419963476444,
+        "age_upon_outcome_in_weeks": 52.9215277777778}
+
+# define search criteria
+search = {"animal_id": "A634647"}
+
+# instantiate an object of AnimalShelter class
+assignment = AnimalShelter('aacuser', 'oioi')
+
+# call the create method
+success = assignment.create(data)
+print(success)
+
+# call the read method
+results = assignment.read(search)
+print(results)
+
+
+
+
+Try 2
+
+from AnimalShelter import AnimalShelter
+
+a = AnimalShelter()
+#inset animal data
+animaldata = [{"name":"bruno", "animal_type":"dog"},{"name":"missy", "animal_type":"cat"},{"name":"Sticky", "animal_type":"dog"}, ]
+
+
+#Create
+for i in animal_data:
+    a.create(i)
+
+#read
+dogs = a.read({"type":"dog"})
+
+for dog in dogs:
+    print(dog)
